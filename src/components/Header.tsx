@@ -1,4 +1,5 @@
 import { useData } from "../contexts/DataContext";
+import DateRange from "./DateRange";
 
 export default function Header() {
   const { data } = useData();
@@ -7,7 +8,7 @@ export default function Header() {
 
   return (
     <div>
-      Header
+      <DateRange />
     </div>
   )
 }
