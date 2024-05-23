@@ -1,5 +1,6 @@
 import './Style.css'
 import Header from './components/Header';
+import Sales from './components/Sales';
 import Sidebar from './components/Sidebar';
 import { DataContextProvider } from './contexts/DataContext';
 import Resume from './pages/Resume';
@@ -12,6 +13,7 @@ function App() {
         <main>
           <Header />
           <Resume />
+          <Sales />
         </main>
       </div>
     </DataContextProvider>
