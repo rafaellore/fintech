@@ -1,16 +1,14 @@
 import { useData } from "../contexts/DataContext";
 
-export default function Resume() {
+const Resume = () => {
   const { data } = useData();
 
   if (data === null) return null;
-
   return (
     <section>
-      <div className="resume flex mb">
+      <div className="resumo flex mb">
         <div className="box">
           <h2>Vendas</h2>
-
           <span>
             {data
               .filter((i) => i.status !== "falha")
@@ -18,10 +16,8 @@ export default function Resume() {
               .toLocaleString("pt-br", { style: "currency", currency: "BRL" })}
           </span>
         </div>
-
         <div className="box">
           <h2>Recebido</h2>
-
           <span>
             {data
               .filter((i) => i.status === "pago")
@@ -29,10 +25,8 @@ export default function Resume() {
               .toLocaleString("pt-br", { style: "currency", currency: "BRL" })}
           </span>
         </div>
-
         <div className="box">
           <h2>Processando</h2>
-
           <span>
             {data
               .filter((i) => i.status === "processando")
@@ -41,8 +35,9 @@ export default function Resume() {
           </span>
         </div>
       </div>
-      <div className="box">Gráficos</div>
+      <div className="box mb">Gráficos</div>
     </section>
   );
+};
 
-}
+export default Resume;
