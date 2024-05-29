@@ -5,7 +5,7 @@ import Sales from './components/Sales';
 import Sidenav from './components/Sidebar';
 import { DataContextProvider } from './contexts/DataContext';
 import Resume from './pages/Resume';
-import Sell from './components/Sell';
+import Sell from './pages/Sell';
 
 function App() {
   return (
