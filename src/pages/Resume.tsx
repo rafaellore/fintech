@@ -1,3 +1,4 @@
+import Graphics from "../components/Graphics";
 import { useData } from "../contexts/DataContext";
 
 const Resume = () => {
@@ -16,6 +17,7 @@ const Resume = () => {
               .toLocaleString("pt-br", { style: "currency", currency: "BRL" })}
           </span>
         </div>
+
         <div className="box">
           <h2>Recebido</h2>
           <span>
@@ -25,8 +27,10 @@ const Resume = () => {
               .toLocaleString("pt-br", { style: "currency", currency: "BRL" })}
           </span>
         </div>
+
         <div className="box">
           <h2>Processando</h2>
+
           <span>
             {data
               .filter((i) => i.status === "processando")
@@ -35,7 +39,10 @@ const Resume = () => {
           </span>
         </div>
       </div>
-      <div className="box mb">Gráficos</div>
+
+      <div className="box mb">
+        <Graphics data={data} />
+      </div>
     </section>
   );
 };
